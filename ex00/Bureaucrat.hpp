@@ -19,8 +19,12 @@ class Bureaucrat
 	Bureaucrat(const Bureaucrat &other); // copy constructor
 	Bureaucrat& operator=(const Bureaucrat &other); // assignment overload
 
+	// Getter and Setter
 	std::string getName() const;
 	int getGrade() const;
+
+	void incrGrade(int n);
+	void decrGrade(int n);
 
 };
 

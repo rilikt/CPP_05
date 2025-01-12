@@ -6,7 +6,7 @@
 /*   By: h4ns <h4ns@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 16:20:07 by timschmi          #+#    #+#             */
-/*   Updated: 2025/01/10 11:12:07 by h4ns             ###   ########.fr       */
+/*   Updated: 2025/01/12 13:10:45 by h4ns             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
 Bureaucrat::Bureaucrat(std::string name, int grade): name(name) 
 {
     if (grade > 150)
-        GradeTooHighException();
-    else if (grade < 1)
         GradeTooLowException();
+    else if (grade < 1)
+        GradeTooHighException();
     this->grade = grade;
     std::cout << "Bureaucrat constructor called" << std::endl;
 }
@@ -28,7 +28,7 @@ Bureaucrat::Bureaucrat(const Bureaucrat &other): name(other.name) , grade(other.
 
 Bureaucrat::~Bureaucrat()
 {
-    std::cout << "Default Destructor called" << std::endl;
+    std::cout << "Bureaucrat Destructor called" << std::endl;
 }
 
 // Overload
@@ -46,7 +46,7 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat &other)
 
 std::ostream& operator<<(std::ostream &os, const Bureaucrat &b)
 {
-    os << b.getName() << " , bureaucrat grade " << b.getGrade();
+    os << b.getName() << ", bureaucrat grade " << b.getGrade();
 
     return os;
 }
@@ -55,12 +55,12 @@ std::ostream& operator<<(std::ostream &os, const Bureaucrat &b)
 
 void Bureaucrat::GradeTooHighException()
 {
-    throw std::runtime_error("Grade too high and outside of maximum(150).");
+    throw std::runtime_error("Grade too high and outside of maximum(1).");
 }
 
 void Bureaucrat::GradeTooLowException()
 {
-    throw std::runtime_error("Grade too low and under the minimum(0).");
+    throw std::runtime_error("Grade too low and under the minimum(150).");
 }
 
 // Getters and Setters
@@ -73,4 +73,21 @@ std::string Bureaucrat::getName() const
 int Bureaucrat::getGrade() const
 {
     return this->grade;
+}
+
+
+void Bureaucrat::incrGrade(int n)
+{
+    if ((this->grade - n) < 1)
+        GradeTooHighException();
+    else
+        this->grade -= n;
+}
+
+void Bureaucrat::decrGrade(int n)
+{
+    if ((this->grade += n) > 150)
+        GradeTooLowException();
+    else
+        this->grade += n;
 }
