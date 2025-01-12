@@ -1,3 +1,0 @@
-/home/h4ns/Desktop/CPP_05/ex00/build/CMakeFiles/bureaucrat.dir
-/home/h4ns/Desktop/CPP_05/ex00/build/CMakeFiles/edit_cache.dir
-/home/h4ns/Desktop/CPP_05/ex00/build/CMakeFiles/rebuild_cache.dir

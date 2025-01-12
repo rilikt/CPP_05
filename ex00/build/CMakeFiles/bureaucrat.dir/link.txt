@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/bureaucrat.dir/main.cpp.o CMakeFiles/bureaucrat.dir/Bureaucrat.cpp.o -o bureaucrat 
