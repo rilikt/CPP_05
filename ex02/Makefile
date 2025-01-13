@@ -6,11 +6,11 @@
 #    By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/09 15:31:31 by timschmi          #+#    #+#              #
-#    Updated: 2025/01/13 11:28:25 by timschmi         ###   ########.fr        #
+#    Updated: 2025/01/13 17:07:33 by timschmi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = Bureaucrat.cpp main.cpp AForm.cpp PresidentialPardonForm.cpp
+SRC = Bureaucrat.cpp main.cpp AForm.cpp PresidentialPardonForm.cpp ShrubberyCreationForm.cpp
 OBJ_DIR = obj
 OBJ = $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 
@@ -30,6 +30,7 @@ $(OBJ_DIR)/%.o: %.cpp
 
 clean:
 	rm -rf $(OBJ_DIR)
+	rm -f *_shrubbery
 
 fclean: clean
 	rm -f $(NAME)

@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 14:56:43 by timschmi          #+#    #+#             */
-/*   Updated: 2025/01/13 15:59:51 by timschmi         ###   ########.fr       */
+/*   Updated: 2025/01/13 16:21:41 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ class Form
 	~Form();
 
 	// Overload
-	Form &operator=(const Form &other);
+	Form &operator=(const Form &other) = delete;
 
 	// Getters
 	std::string getName() const;

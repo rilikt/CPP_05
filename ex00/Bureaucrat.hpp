@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 14:37:48 by timschmi          #+#    #+#             */
-/*   Updated: 2025/01/13 14:37:53 by timschmi         ###   ########.fr       */
+/*   Updated: 2025/01/13 16:23:19 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ class Bureaucrat
 	Bureaucrat(std::string name, int grade);
 	~Bureaucrat(); // default destructor
 	Bureaucrat(const Bureaucrat &other); // copy constructor
-	Bureaucrat& operator=(const Bureaucrat &other); // assignment overload
+	Bureaucrat& operator=(const Bureaucrat &other) = delete; // assignment overload
 
 	// Getter and Setter
 	std::string getName() const;

@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 16:20:07 by timschmi          #+#    #+#             */
-/*   Updated: 2025/01/13 15:50:36 by timschmi         ###   ########.fr       */
+/*   Updated: 2025/01/13 16:27:21 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,14 @@ Bureaucrat::~Bureaucrat()
 
 // Overload
 
-Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)
-{
-	if (this == &other)
-		return (*this);
-	std::cerr << "Private name variable not assignable!" << std::endl;
-	this->grade = other.grade;
-	return (*this);
-}
+// Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)
+// {
+// 	if (this == &other)
+// 		return (*this);
+// 	std::cerr << "Private name variable not assignable!" << std::endl;
+// 	this->grade = other.grade;
+// 	return (*this);
+// }
 
 std::ostream &operator<<(std::ostream &os, const Bureaucrat &b)
 {

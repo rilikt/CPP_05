@@ -6,21 +6,26 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 15:07:51 by timschmi          #+#    #+#             */
-/*   Updated: 2025/01/13 15:57:46 by timschmi         ###   ########.fr       */
+/*   Updated: 2025/01/13 17:06:36 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
 #include "PresidentialPardonForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 int main(void)
 {
 	Bureaucrat a("Ali" , 5);
 	// AForm f("Form", 5, 5);
 	PresidentialPardonForm p("Ali");
+	ShrubberyCreationForm s("Tree");
 
 	std::cout << p << std::endl;
+
+	a.signForm(s);
+	s.execute(a);
 	
 	try
 	{

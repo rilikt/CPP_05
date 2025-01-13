@@ -32,13 +32,13 @@ Form::~Form()
 
 // Overload
 
-Form &Form::operator=(const Form &other)
-{
-	if (this == &other)
-		return (*this);
-	std::cerr << "Constant values can be changed!" << std::endl;
-	return (*this);
-}
+// Form &Form::operator=(const Form &other)
+// {
+// 	if (this == &other)
+// 		return (*this);
+// 	std::cerr << "Constant values can be changed!" << std::endl;
+// 	return (*this);
+// }
 
 std::ostream &operator<<(std::ostream &os, const Form &f)
 {

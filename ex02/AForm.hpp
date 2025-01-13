@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 11:02:11 by timschmi          #+#    #+#             */
-/*   Updated: 2025/01/13 16:02:39 by timschmi         ###   ########.fr       */
+/*   Updated: 2025/01/13 16:21:08 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ class AForm
 	virtual ~AForm();
 
 	// Overload
-	AForm &operator=(const AForm &other);
+	AForm &operator=(const AForm &other) = delete;
 
 	// Getters
 	std::string getName() const;

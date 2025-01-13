@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 11:02:36 by timschmi          #+#    #+#             */
-/*   Updated: 2025/01/13 16:03:06 by timschmi         ###   ########.fr       */
+/*   Updated: 2025/01/13 16:27:15 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,13 @@ AForm::~AForm()
 
 // Overload
 
-AForm &AForm::operator=(const AForm &other)
-{
-	if (this == &other)
-		return (*this);
-	std::cerr << "Constant values can be changed!" << std::endl;
-	return (*this);
-}
+// AForm &AForm::operator=(const AForm &other)
+// {
+// 	if (this == &other)
+// 		return (*this);
+// 	std::cerr << "Constant values can be changed!" << std::endl;
+// 	return (*this);
+// }
 
 std::ostream &operator<<(std::ostream &os, const AForm &f)
 {

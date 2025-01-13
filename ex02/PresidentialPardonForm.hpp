@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 11:14:03 by timschmi          #+#    #+#             */
-/*   Updated: 2025/01/13 15:58:43 by timschmi         ###   ########.fr       */
+/*   Updated: 2025/01/13 16:21:16 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ class PresidentialPardonForm : public AForm
 	PresidentialPardonForm(const PresidentialPardonForm &other);
 	~PresidentialPardonForm();
   // Overload
-	PresidentialPardonForm& operator=(const PresidentialPardonForm &other);
-
+	PresidentialPardonForm& operator=(const PresidentialPardonForm &other) = delete;
 	void task(std::string target) const override;
 };
