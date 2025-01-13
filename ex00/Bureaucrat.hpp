@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/13 14:37:48 by timschmi          #+#    #+#             */
+/*   Updated: 2025/01/13 14:37:53 by timschmi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #pragma once
 
@@ -5,16 +16,23 @@
 
 class Bureaucrat
 {
-	private:
+  private:
 	const std::string name;
 	int grade;
-	void GradeTooHighException();
-	void GradeTooLowException();
 
-	public:
-	// Bureaucrat(); // void constructor
+	class GradeTooHighException: public std::exception
+	{
+		const char* what() const noexcept override;
+	};
 
-	Bureaucrat(std::string name, int grade); // default constructor
+	class GradeTooLowException: public std::exception
+	{
+		const char* what() const noexcept override;
+	};
+
+  public:
+	Bureaucrat(); // default constructor
+	Bureaucrat(std::string name, int grade);
 	~Bureaucrat(); // default destructor
 	Bureaucrat(const Bureaucrat &other); // copy constructor
 	Bureaucrat& operator=(const Bureaucrat &other); // assignment overload
@@ -25,7 +43,6 @@ class Bureaucrat
 
 	void incrGrade(int n);
 	void decrGrade(int n);
-
 };
 
 std::ostream& operator<<(std::ostream &os, const Bureaucrat &b);

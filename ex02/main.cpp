@@ -6,42 +6,31 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 15:07:51 by timschmi          #+#    #+#             */
-/*   Updated: 2025/01/13 14:38:07 by timschmi         ###   ########.fr       */
+/*   Updated: 2025/01/13 15:57:46 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "AForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 int main(void)
 {
-	Bureaucrat a("Ali" , 10);
-	Bureaucrat m("Max", 150);
-	Bureaucrat b;
+	Bureaucrat a("Ali" , 5);
+	// AForm f("Form", 5, 5);
+	PresidentialPardonForm p("Ali");
 
-	std::cout << b << std::endl;
-
-	for (int i = 0; i < 10; i++)
+	std::cout << p << std::endl;
+	
+	try
 	{
-		std::cout << a << std::endl;
-
-		try
-		{
-			a.incrGrade(1);
-		}
-		catch(const std::exception& e)
-		{
-			std::cerr << "Exception caught: " << e.what() << std::endl;
-		}
+		a.signForm(p);
+		p.execute(a);
 	}
-
-	// try
-	// {
-	// 	Bureaucrat a("Mon", 200);
-	// }
-	// catch(const std::exception& e)
-	// {
-	// 	std::cerr << "Exception caught: " << e.what() << std::endl;
-	// }
+	catch(const std::exception& e)
+	{
+		std::cerr << "Exception caught: " << e.what() << std::endl;
+	}
 	
 	return(0);
 }

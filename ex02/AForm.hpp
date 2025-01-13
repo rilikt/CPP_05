@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/13 14:56:43 by timschmi          #+#    #+#             */
-/*   Updated: 2025/01/13 15:59:51 by timschmi         ###   ########.fr       */
+/*   Created: 2025/01/13 11:02:11 by timschmi          #+#    #+#             */
+/*   Updated: 2025/01/13 16:02:39 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,11 @@
 // #include "Bureaucrat.hpp"
 class	Bureaucrat;
 
-class Form
+class AForm
 {
   private:
 	const std::string name;
+	const std::string target;
 	bool sign;
 	const int min_sign;
 	const int min_exec;
@@ -38,25 +39,34 @@ class Form
 	{
 		const char *what() const noexcept override;
 	};
+	class FormNotSigned : public std::exception
+	{
+		const char *what() const noexcept override;
+	};
 
   public:
 	// Constructors, Destructors
-	Form();
-	Form(std::string name, int min_sign, int min_exec);
-	Form(const Form &other);
-	~Form();
+	AForm();
+	AForm(std::string name, std::string target, int min_sign, int min_exec);
+	AForm(const AForm &other);
+	virtual ~AForm();
 
 	// Overload
-	Form &operator=(const Form &other);
+	AForm &operator=(const AForm &other);
 
 	// Getters
 	std::string getName() const;
 	bool isSigned() const;
 	int getSignReq() const;
 	int getExecReq() const;
+	std::string getTarget() const;
 
 	// Signing
 	void beSigned(const Bureaucrat &b);
+
+	//Execution
+	void execute(const Bureaucrat &executor) const;
+	virtual void task(std::string target) const = 0;
 };
 
-std::ostream &operator<<(std::ostream &os, const Form &f);
+std::ostream &operator<<(std::ostream &os, const AForm &f);

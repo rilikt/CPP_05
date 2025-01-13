@@ -6,12 +6,12 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 16:20:07 by timschmi          #+#    #+#             */
-/*   Updated: 2025/01/13 14:52:50 by timschmi         ###   ########.fr       */
+/*   Updated: 2025/01/13 15:50:36 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 
 // Constructors and Destructor
 
@@ -96,7 +96,7 @@ void Bureaucrat::decrGrade(int n)
 }
 // Signing
 
-void Bureaucrat::signForm(Form &f)
+void Bureaucrat::signForm(AForm &f)
 {
 	try
 	{

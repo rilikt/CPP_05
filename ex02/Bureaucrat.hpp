@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 14:52:21 by timschmi          #+#    #+#             */
-/*   Updated: 2025/01/13 14:52:37 by timschmi         ###   ########.fr       */
+/*   Updated: 2025/01/13 15:50:54 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include <iostream>
 // #include "Form.hpp"
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -47,7 +47,7 @@ class Bureaucrat
 	void decrGrade(int n);
 
 	// Signing
-	void signForm(Form &f);
+	void signForm(AForm &f);
 };
 
 std::ostream& operator<<(std::ostream &os, const Bureaucrat &b);
