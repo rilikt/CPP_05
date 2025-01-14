@@ -6,9 +6,11 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 11:14:03 by timschmi          #+#    #+#             */
-/*   Updated: 2025/01/13 16:21:16 by timschmi         ###   ########.fr       */
+/*   Updated: 2025/01/14 16:34:08 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#pragma once
 
 #include "AForm.hpp"
 
