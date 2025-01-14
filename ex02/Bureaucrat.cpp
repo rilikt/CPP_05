@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 16:20:07 by timschmi          #+#    #+#             */
-/*   Updated: 2025/01/13 16:27:21 by timschmi         ###   ########.fr       */
+/*   Updated: 2025/01/14 12:33:10 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,6 +94,7 @@ void Bureaucrat::decrGrade(int n)
 	else
 		this->grade += n;
 }
+
 // Signing
 
 void Bureaucrat::signForm(AForm &f)
@@ -108,4 +109,20 @@ void Bureaucrat::signForm(AForm &f)
 		return ;
 	}
 	std::cout << this->getName() << " signed " << f.getName() << std::endl;
+}
+
+// Executing
+
+void Bureaucrat::executeForm(const AForm &form)
+{
+	try
+	{
+		form.execute(*this);
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << "Exception caught: " << e.what() << '\n';
+		return;
+	}
+	std::cout << this->name << " executed " << form.getName() << std::endl; 
 }

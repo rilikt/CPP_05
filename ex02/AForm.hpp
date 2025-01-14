@@ -6,13 +6,21 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 11:02:11 by timschmi          #+#    #+#             */
-/*   Updated: 2025/01/13 16:21:08 by timschmi         ###   ########.fr       */
+/*   Updated: 2025/01/14 10:38:00 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
+
+#define R "\033[0m"
+#define Bl "\033[30m"
+#define Ro "\033[31m"
+#define G "\033[32m"
+#define Y "\033[33m"
+#define B "\033[34m"
+#define M "\033[35m"
 
 // #include "Bureaucrat.hpp"
 class	Bureaucrat;

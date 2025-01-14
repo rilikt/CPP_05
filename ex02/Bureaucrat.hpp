@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 14:52:21 by timschmi          #+#    #+#             */
-/*   Updated: 2025/01/13 16:27:32 by timschmi         ###   ########.fr       */
+/*   Updated: 2025/01/14 11:25:43 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,9 @@ class Bureaucrat
 
 	// Signing
 	void signForm(AForm &f);
+
+	//Executing
+	void executeForm(const AForm &form);
 };
 
 std::ostream& operator<<(std::ostream &os, const Bureaucrat &b);
