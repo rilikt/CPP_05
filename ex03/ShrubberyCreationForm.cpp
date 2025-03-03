@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 16:38:59 by timschmi          #+#    #+#             */
-/*   Updated: 2025/01/14 12:45:05 by timschmi         ###   ########.fr       */
+/*   Updated: 2025/01/22 10:25:37 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,4 +118,5 @@ void ShrubberyCreationForm::task(std::string target) const
 	}
 	else
 		std::cerr << "Couldn't open file." << std::endl;
+	output.close();
 }

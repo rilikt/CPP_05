@@ -6,12 +6,14 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 15:07:51 by timschmi          #+#    #+#             */
-/*   Updated: 2025/01/14 13:52:00 by timschmi         ###   ########.fr       */
+/*   Updated: 2025/03/03 16:54:06 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "Intern.hpp"
+
+//use rand() or std::rand()??
 
 int main(void)
 {
@@ -45,7 +47,7 @@ int main(void)
 		std::cout << std::endl;
 	}
 
-	std::cout << Ro << "| - Destruction - |" << std::endl;
+	std::cout << Ro << "| - Destruction - |" << R << std::endl;
 	
 	return(0);
 }

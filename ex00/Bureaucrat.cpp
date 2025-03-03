@@ -6,15 +6,14 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 16:20:07 by timschmi          #+#    #+#             */
-/*   Updated: 2025/01/13 16:27:56 by timschmi         ###   ########.fr       */
+/*   Updated: 2025/03/03 16:56:55 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
 // Constructors and Destructor
-
-Bureaucrat::Bureaucrat() : name("<default>"), grade(150){};
+Bureaucrat::Bureaucrat() : name("<default>"), grade(150){std::cout << "Default Bureaucrat constructor called" << std::endl;};
 
 Bureaucrat::Bureaucrat(std::string name, int grade) : name(name)
 {
@@ -88,7 +87,7 @@ void Bureaucrat::incrGrade(int n)
 
 void Bureaucrat::decrGrade(int n)
 {
-	if ((this->grade += n) > 150)
+	if ((this->grade + n) > 150)
 		throw GradeTooLowException();
 	else
 		this->grade += n;

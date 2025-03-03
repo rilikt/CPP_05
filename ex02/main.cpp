@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 15:07:51 by timschmi          #+#    #+#             */
-/*   Updated: 2025/01/14 12:48:31 by timschmi         ###   ########.fr       */
+/*   Updated: 2025/03/03 16:48:43 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int main(void)
 			std::cerr << "Exception caught: " << e.what() << std::endl;
 		}
 		
-	std::cout << Ro << "| - Destruction - |" << std::endl;
+	std::cout << Ro << "| - Destruction - |" << R << std::endl;
 	
 	return(0);
 }

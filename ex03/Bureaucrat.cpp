@@ -6,7 +6,7 @@
 /*   By: timschmi <timschmi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 16:20:07 by timschmi          #+#    #+#             */
-/*   Updated: 2025/01/14 12:33:10 by timschmi         ###   ########.fr       */
+/*   Updated: 2025/03/03 16:58:02 by timschmi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 #include "AForm.hpp"
 
 // Constructors and Destructor
-
-Bureaucrat::Bureaucrat() : name("<default>"), grade(150){};
+Bureaucrat::Bureaucrat() : name("<default>"), grade(150){std::cout << "Default Bureaucrat constructor called" << std::endl;};
 
 Bureaucrat::Bureaucrat(std::string name, int grade) : name(name)
 {
@@ -105,7 +104,7 @@ void Bureaucrat::signForm(AForm &f)
 	}
 	catch (const std::exception &e)
 	{
-		std::cerr << this->getName() << " couldn't sign " << f.getName() << " because " << e.what() << '\n';
+		std::cerr << "Exception caught: " << this->getName() << " couldn't sign " << f.getName() << " because " << e.what() << '\n';
 		return ;
 	}
 	std::cout << this->getName() << " signed " << f.getName() << std::endl;
